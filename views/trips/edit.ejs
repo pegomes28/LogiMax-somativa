@@ -1,0 +1,16 @@
+ 
+<div class="card">
+  <h2>Editar Viagem</h2>
+  <form method="post" action="/trips/<%= t._id %>?_method=PUT">
+    <label>Origem<input name="origem" value="<%= t.origem %>" required></label>
+    <label>Destino<input name="destino" value="<%= t.destino %>" required></label>
+    <label>Status
+      <select name="status">
+        <option value="Agendada" <%= t.status==='Agendada' ? 'selected' : '' %>>Agendada</option>
+        <option value="Em Curso" <%= t.status==='Em Curso' ? 'selected' : '' %>>Em Curso</option>
+        <option value="Finalizada" <%= t.status==='Finalizada' ? 'selected' : '' %>>Finalizada</option>
+      </select>
+    </label>
+    <button class="btn" type="submit">Salvar</button>
+  </form>
+</div>

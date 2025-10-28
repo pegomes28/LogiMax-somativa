@@ -1,0 +1,11 @@
+ 
+<div class="card">
+  <h2>Editar Veículo</h2>
+  <form method="post" action="/veiculos/<%= v._id %>?_method=PUT">
+    <label>Placa<input name="placa" value="<%= v.placa %>" required></label>
+    <label>Modelo<input name="modelo" value="<%= v.modelo %>" required></label>
+    <label>Ano<input name="ano" value="<%= v.ano %>" type="number" required></label>
+    <label>kmAtual<input name="kmAtual" value="<%= v.kmAtual %>" type="number"></label>
+    <button class="btn" type="submit">Atualizar</button>
+  </form>
+</div>

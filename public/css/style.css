@@ -1,0 +1,152 @@
+
+
+:root {
+  --bg: #071129;
+  --card: #0f172a;
+  --accent1: #0ea5e9;
+  --accent2: #7c3aed;
+  --text: #e6eef8;
+
+  /* --- NOVO: Variáveis para transparências --- */
+  --border-color-light: rgba(255, 255, 255, 0.04);
+  --bg-transparent-light: rgba(255, 255, 255, 0.02);
+  --bg-transparent-medium: rgba(255, 255, 255, 0.01);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif; /* Fontes agora importadas */
+  background: linear-gradient(180deg, #071129, #081226);
+  color: var(--text);
+  line-height: 1.6; /* AJUSTE: Melhor legibilidade */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.header .brand a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  /* AJUSTE: Usando variáveis */
+  background: linear-gradient(135deg, var(--bg-transparent-light), var(--bg-transparent-medium));
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500; /* AJUSTE: Um pouco mais de peso */
+  transition: opacity 0.2s ease-out; /* --- NOVO: Transição suave --- */
+}
+
+/* --- NOVO: Estado Hover para botões --- */
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--border-color-light); /* AJUSTE: Usando variável */
+  transition: background 0.2s ease-out, color 0.2s ease-out; /* --- NOVO: Transição --- */
+}
+
+/* --- NOVO: Estado Hover para botão fantasma --- */
+.btn.ghost:hover {
+  background: var(--bg-transparent-light);
+  color: var(--text);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-color-light); /* AJUSTE: Usando variável */
+}
+
+.auth-card {
+  max-width: 420px;
+  margin: 40px auto;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px; /* AJUSTE: Menos margem inferior */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-light); /* AJUSTE: Usando variável */
+  background: var(--bg-transparent-light); /* AJUSTE: Usando variável */
+  color: var(--text);
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out; /* --- NOVO: Transição --- */
+}
+
+/* --- NOVO: Estado de Foco para inputs (Importante!) --- */
+input:focus,
+select:focus,
+input:focus-visible,
+select:focus-visible {
+  outline: none; /* Remove o contorno padrão */
+  border-color: var(--accent1); /* Destaca a borda */
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3); /* Adiciona um "brilho" */
+}
+
+.error {
+  background: #ffefef;
+  color: #7a1b1b;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.alert {
+  background: rgba(255, 200, 0, 0.08);
+  color: #ffd166;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 14px;
+  color: rgba(255, 255, 255, 0.65); /* AJUSTE: Melhor contraste */
+}

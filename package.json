@@ -1,0 +1,25 @@
+{
+  "name": "sgm-logimax-mvc",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.6.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sass": "^1.62.0"
+  }
+}

@@ -1,0 +1,13 @@
+ 
+<div class="card">
+  <h2>Viagens</h2>
+  <a class="btn" href="/trips/new">Nova Viagem</a>
+  <table class="table"><thead><tr><th>Origem</th><th>Destino</th><th>Veículo</th><th>Motorista</th><th>Status</th><th>Ações</th></tr></thead><tbody>
+    <% trips.forEach(t=>{ %>
+      <tr>
+        <td><%= t.origem %></td><td><%= t.destino %></td><td><%= t.veiculo.placa %></td><td><%= t.driver.name %></td><td><%= t.status %></td>
+        <td><a href="/trips/<%= t._id %>/edit">Editar</a></td>
+      </tr>
+    <% }) %>
+  </tbody></table>
+</div>

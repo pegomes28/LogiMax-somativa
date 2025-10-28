@@ -1,0 +1,22 @@
+ 
+<div class="card">
+  <h2>Painel do Motorista</h2>
+  <h3>Suas Viagens</h3>
+  <table class="table"><thead><tr><th>Origem</th><th>Destino</th><th>Veículo</th><th>Status</th><th>Ações</th></tr></thead><tbody>
+    <% trips.forEach(t=>{ %>
+      <tr>
+        <td><%= t.origem %></td><td><%= t.destino %></td><td><%= t.veiculo.placa %></td><td><%= t.status %></td>
+        <td>
+          <% if(t.status !== 'Finalizada'){ %>
+            <form method="post" action="/driver/trips/<%= t._id %>/finalize">
+              <input name="kmFinal" placeholder="km final" required />
+              <button class="btn" type="submit">Finalizar</button>
+            </form>
+          <% } else { %>
+            Finalizada
+          <% } %>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody></table>
+</div>

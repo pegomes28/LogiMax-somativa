@@ -1,0 +1,19 @@
+ 
+<div class="card">
+  <h2>Nova Viagem</h2>
+  <form method="post" action="/trips">
+    <label>Origem<input name="origem" required></label>
+    <label>Destino<input name="destino" required></label>
+    <label>Veículo
+      <select name="veiculo" required>
+        <% veiculos.forEach(v=>{ %><option value="<%= v._id %>"><%= v.placa %> - <%= v.modelo %></option><% }) %>
+      </select>
+    </label>
+    <label>Motorista
+      <select name="driver" required>
+        <% drivers.forEach(d=>{ %><option value="<%= d._id %>"><%= d.name %></option><% }) %>
+      </select>
+    </label>
+    <button class="btn" type="submit">Criar</button>
+  </form>
+</div>

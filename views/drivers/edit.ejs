@@ -1,0 +1,10 @@
+ 
+<div class="card">
+  <h2>Editar Motorista</h2>
+  <form method="post" action="/manager/drivers/<%= d._id %>?_method=PUT">
+    <label>Nome<input name="name" value="<%= d.name %>" required></label>
+    <label>Documento<input name="documento" value="<%= d.documento %>"></label>
+    <label>Telefone<input name="telefone" value="<%= d.telefone %>"></label>
+    <button class="btn" type="submit">Atualizar</button>
+  </form>
+</div>

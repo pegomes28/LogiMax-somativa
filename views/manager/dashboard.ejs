@@ -1,0 +1,34 @@
+ 
+<div class="card">
+  <h2>Painel do Gestor</h2>
+  <h3>Veículos</h3>
+  <a class="btn" href="/veiculos/new">Novo Veículo</a>
+  <table class="table"><thead><tr><th>Placa</th><th>Modelo</th><th>Ano</th><th>kmAtual</th><th>Ações</th></tr></thead><tbody>
+    <% veiculos.forEach(v=>{ %>
+      <tr>
+        <td><%= v.placa %></td><td><%= v.modelo %></td><td><%= v.ano %></td><td><%= v.kmAtual %></td>
+        <td><a href="/veiculos/<%= v._id %>/edit">Editar</a></td>
+      </tr>
+    <% }) %>
+  </tbody></table>
+
+  <h3>Motoristas</h3>
+  <a class="btn" href="/manager/drivers/new">Novo Motorista</a>
+  <table class="table"><thead><tr><th>Nome</th><th>Telefone</th><th>Ações</th></tr></thead><tbody>
+    <% drivers.forEach(d=>{ %>
+      <tr><td><%= d.name %></td><td><%= d.telefone || '-' %></td><td><a href="/manager/drivers/<%= d._id %>/edit">Editar</a></td></tr>
+    <% }) %>
+  </tbody></table>
+
+  <h3>Viagens</h3>
+  <a class="btn" href="/trips/new">Nova Viagem</a>
+  <table class="table"><thead><tr><th>Origem</th><th>Destino</th><th>Veículo</th><th>Motorista</th><th>Status</th></tr></thead><tbody>
+    <% trips.forEach(t=>{ %>
+      <tr><td><%= t.origem %></td><td><%= t.destino %></td><td><%= t.veiculo.placa %></td><td><%= t.driver.name %></td><td><%= t.status %></td></tr>
+    <% }) %>
+  </tbody></table>
+
+  <% if(alerts && alerts.length>0){ %>
+    <div class="alert">Veículos próximos à manutenção: <%= alerts.map(a=>a.placa).join(', ') %></div>
+  <% } %>
+</div>

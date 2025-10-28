@@ -1,0 +1,10 @@
+ 
+<div class="card">
+  <h2>Motoristas</h2>
+  <a class="btn" href="/manager/drivers/new">Adicionar Motorista</a>
+  <table class="table"><thead><tr><th>Nome</th><th>Documento</th><th>Telefone</th><th>Ações</th></tr></thead><tbody>
+    <% drivers.forEach(d=>{ %>
+      <tr><td><%= d.name %></td><td><%= d.documento || '-' %></td><td><%= d.telefone || '-' %></td><td><a href="/manager/drivers/<%= d._id %>/edit">Editar</a></td></tr>
+    <% }) %>
+  </tbody></table>
+</div>

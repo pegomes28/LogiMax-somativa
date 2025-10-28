@@ -1,0 +1,17 @@
+ 
+<div class="card auth-card">
+  <h2>Registrar</h2>
+  <% if(error){ %><div class="error"><%= error %></div><% } %>
+  <form method="post" action="/register">
+    <label>Nome<input type="text" name="name" required></label>
+    <label>Email<input type="email" name="email" required></label>
+    <label>Senha<input type="password" name="password" required></label>
+    <label>Role
+      <select name="role">
+        <option value="driver">Motorista</option>
+        <option value="manager">Gestor</option>
+      </select>
+    </label>
+    <button class="btn" type="submit">Criar conta</button>
+  </form>
+</div>

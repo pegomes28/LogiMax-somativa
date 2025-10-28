@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>SGM - LogiMax</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><a href="/">SGM - LogiMax</a></div>
+    <nav>
+      <% if(!currentUser){ %>
+        <a href="/login">Login</a> | <a href="/register">Register</a>
+      <% } else { %>
+        <span>Olá, <%= currentUser.name %> (<%= currentUser.role %>)</span>
+        <% if(currentUser.role === 'manager'){ %>
+          | <a href="/manager">Painel Manager</a>
+        <% } else { %>
+          | <a href="/driver">Painel Motorista</a>
+        <% } %>
+        | <form style="display:inline" method="post" action="/logout"><button type="submit">Logout</button></form>
+      <% } %>
+    </nav>
+  </header>
+  <main class="main">
+    <%- body %>
+  </main>
+  <footer class="footer">DevSolutions - Projeto SGM</footer>
+</body>
+</html>
