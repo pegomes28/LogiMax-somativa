@@ -44,7 +44,7 @@ Scripts úteis
 - npm start — inicia em modo produção
 
 Design
-- Link do protótipo: https://www.figma.com/design/ZjIS7c8HkupmEsmNabvcfX/Untitled
+- Link do protótipo: https://www.figma.com/design/fpBodWKN72kXf5rWEKqXFK/CineFavorite-Frotas?node-id=56-19&t=ARfuRUV1VSWPjIhC-1
 
 ---
 # Avaliação Somativa — Desenvolvimento de Soluções Corporativas Full-Stack
