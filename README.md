@@ -31,12 +31,12 @@ Instalação e execução (Windows)
    - npm run dev
    - npm start
 8. Abrir no navegador:
-   - http://localhost:4000 (ou PORT definido em .env)
+   - http://localhost:3011 (ou PORT definido em .env)
 
 Variáveis .env (exemplos)
 - MONGO_URI=mongodb://localhost:27017/logimax
 - SESSION_SECRET=sua_chave_segura
-- PORT=4000
+- PORT=3011
 
 Scripts úteis
 - npm run seed — popula banco com dados de exemplo
